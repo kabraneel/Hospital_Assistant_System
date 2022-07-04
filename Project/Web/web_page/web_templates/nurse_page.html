@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>NURSE</title>
+  </head>
+  <style type="text/css">
+      h1 {
+        text-align: center;
+        background-color: lightgrey;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      body {
+        text-align: center;
+      }
+      input[type=text] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=password] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=submit] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+  <body>
+    <div class="patient-content">
+      <div class="patient-text">
+        <h1>NURSE</h1>
+      </div>
+      <div class="home-img">
+        <img src="{{ url_for('static',filename='styles/8619.jpg') }}" alt="" />
+      </div>
+    </div>
+    <form action = "{{ url_for('nurse_page') }}" method = "post">
+      <label for="NurseFunctions">Choose what you want to do: </label>
+      <select name="nf">
+          <option value="TES">Enter Test Results</option>
+          <option value="OPT">Enter Operation Results</option>
+          <option value="CHG">Change Password</option>
+      </select><br><br>
+      <input type="submit" name="Submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>ENTER OPERATION RESULT</title>
+  </head>
+  <style type="text/css">
+      h1 {
+        text-align: center;
+        background-color: lightgrey;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      body {
+        text-align: center;
+      }
+      input[type=text] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=password] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=submit] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+  <body>
+    <div class="patient-content">
+      <div class="patient-text">
+        <h1>ENTER OPERATION RESULT</h1>
+        <p>
+          Please fill the following details:
+        </p><br>
+      </div>
+      <div class="home-img">
+        <img src="{{ url_for('static',filename='styles/8619.jpg') }}" alt="" />
+      </div>
+    </div>
+    <form action = "{{ url_for('op_res') }}" method = "post">
+      <!-- <label for="PatientFunctions">Choose what you want to do: </label> -->
+      <label for="nid" >Nurse ID:</label>
+      <input type="text" name="nid"><br>
+      <label for="pwd" >Password:</label>
+      <input type="password" name="pwd"><br>
+      <label for="pid" >Patient ID:</label>
+      <input type="text" name="pid"><br>
+      <label for="oid" >Operation ID:</label>
+      <input type="text" name="oid"><br>
+      <label for="presid" >Prescription ID:</label>
+      <input type="text" name="presid"><br>
+      <label for="res" >Result:</label>
+      <input type="text" name="res"><br>
+      <input type="submit" name="Submit">
+    </form>
+  </body>
+</html>

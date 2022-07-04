@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DBMS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+  </head>
+  <body>
+    <div class="home-content">
+      <div class="home-text">
+        <h1>Nurse page</h1>
+        <p>
+          This is the page for nurse.
+        </p>
+      </div>
+      <div class="home-img">
+        <img src="{{ url_for('static',filename='styles/8619.jpg') }}" alt="" />
+      </div>
+    </div>
+<!--     <form action = "{{ url_for('upload_file') }}" method = "post">
+
+      <input type="checkbox" value="doctor" name="nurse">
+      <label for = "doctor">Doctor : </label>
+      <input type="checkbox" value="nurse" name="nurse">
+      <label for = "doctor">Nurse : </label>
+      <input type="checkbox" value="patient" name="nurse">
+      <label for = "doctor">Patient : </label>
+     
+      <input type="submit" value="Submit">
+  </form>
+ --> <!--    <script>
+        var inputs = document.querySelectorAll('.file-input')
+
+        for (var i = 0, len = inputs.length; i < len; i++) {
+          customInput(inputs[i])
+        }
+
+        function customInput (el) {
+          const fileInput = el.querySelector('[type="file"]')
+          const label = el.querySelector('[data-js-label]')
+
+          fileInput.onchange =
+          fileInput.onmouseout = function () {
+            if (!fileInput.value) return
+
+            var value = fileInput.value.replace(/^.*[\\\/]/, '')
+            el.className += ' -chosen'
+            label.innerText = value
+          }
+        }
+        ./ngrok authtoken 28Ht3D3s4iXXacOURVljRA6LyUh_3cgw8XT4hJD3XYJGMDf59
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>PATIENT</title>
+  </head>
+  <body>
+    <div class="patient-content">
+      <div class="patient-text">
+        <h1>PATIENT</h1>
+        <p>
+          You may choose to do one of the following: 1. View All Doctors 2. View All Tests 3. New Appointment 4. Appointment for existing patients
+        </p>
+      </div>
+      <div class="home-img">
+        <img src="{{ url_for('static',filename='styles/8619.jpg') }}" alt="" />
+      </div>
+    </div>
+    <form action = "{{ url_for('patient_page') }}" method = "post">
+      <label for="PatientFunctions">Choose what you want to do: </label>
+      <select name="pf">
+        <optgroup label = "View All Doctors">
+          <option value="DOCCardiology">Cardiology</option>
+          <option value="DOCEyes">Eyes</option>
+          <option value="DOCSkin">Skin</option>
+        </optgroup>
+        <optgroup label= "View all Tests">
+          <option value="TESviewTest">View all Tests</option>
+        </optgroup>
+        <optgroup label="For New Patients">
+          <option value="NEA">New Appointment</option>
+        </optgroup>
+        <optgroup label="For Patients Who Have Visited Us Before">
+          <option value="APP">Appointment</option>
+        </optgroup>
+      </select>
+      <input type="submit" name="Submit">
+    </form>
+  </body>
+</html>

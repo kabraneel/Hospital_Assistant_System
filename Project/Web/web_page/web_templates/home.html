@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hospital Assistant</title>
+  </head>
+  <style type="text/css">
+      h1 {
+        text-align: center;
+        background-color: lightgrey;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      body {
+        text-align: center;
+      }
+      input[type=text] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=password] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=submit] {
+        padding: 10px;
+        margin: 10px 0;
+      }    </style>
+  <body>
+    <div class="home-content">
+      <div class="home-text">
+        <h1>Welcome To Our Hospital Assistant!</h1>
+        <p>
+          If You are a <strong>Patient/Doctor/Nurse</strong> choose from list below
+        </p>
+      </div>
+      <div class="home-img">
+        <img src="{{ url_for('static',filename='styles/8619.jpg') }}" alt="" />
+      </div>
+    </div>
+    <form action = "{{ url_for('upload_file') }}" method = "post">
+      <label for="HomeFn"></label>
+      <select name="hf">
+          <option value="PAT">Patient</option>
+          <option value="DOC">Doctor</option>
+          <option value="NUR">Nurse</option>
+      </select><br><br><br>
+      <input type="submit" name="Submit">
+      <!-- <input type="checkbox" value="doctor" name="nurse">
+      <label for = "doctor">Doctor </label><br>
+      <input type="checkbox" value="nurse" name="nurse">
+      <label for = "doctor">Nurse </label><br>
+      <input type="checkbox" value="patient" name="nurse">
+      <label for = "doctor">Patient </label><br>
+     
+      <input type="submit" value="Submit"> -->
+  </form>
+ <!--    <script>
+        var inputs = document.querySelectorAll('.file-input')
+
+        for (var i = 0, len = inputs.length; i < len; i++) {
+          customInput(inputs[i])
+        }
+
+        function customInput (el) {
+          const fileInput = el.querySelector('[type="file"]')
+          const label = el.querySelector('[data-js-label]')
+
+          fileInput.onchange =
+          fileInput.onmouseout = function () {
+            if (!fileInput.value) return
+
+            var value = fileInput.value.replace(/^.*[\\\/]/, '')
+            el.className += ' -chosen'
+            label.innerText = value
+          }
+        }
+        ./ngrok authtoken 28Ht3D3s4iXXacOURVljRA6LyUh_3cgw8XT4hJD3XYJGMDf59
+    </script> -->
+  </body>
+</html>

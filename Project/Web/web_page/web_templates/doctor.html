@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      h1 {
+        text-align: center;
+        background-color: lightgrey;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      body {
+        text-align: center;
+      }
+      input[type=text] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=password] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=submit] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+    <title>Doctor</title>
+  </head>
+  <body>
+    <div class="home-content">
+      <div class="home-text">
+        <h1>Doctor</h1>
+        <p>
+          Choose one of the following :
+        </p>
+      </div>
+      <div class="home-img">
+        <img src="{{ url_for('doctor_page') }}" alt="" />
+      </div>
+    </div>
+    <form action = "{{ url_for('doctor_page') }}" method = "post">
+
+      <!-- <input type="checkbox" value="medical" name="val">
+      <label for = "doctor"> Medical History </label><br>
+      <input type="checkbox" value="putpres" name="val">
+      <label for = "doctor"> Insert Prescription </label><br>
+      <input type="checkbox" value="callnurse" name="val">
+      <label for = "doctor"> Call Nurse </label><br>
+      <input type="checkbox" value="relnurse" name="val">
+      <label for = "doctor"> Release Nurse </label><br> -->
+     
+      <label for="Doctorfunctions">Choose what you want to do: </label>
+      <select name="df">
+        <!-- <optgroup label = "View All Doctors">
+          <option value="DOCCardiology">Cardiology</option>
+          <option value="DOCEyes">Eyes</option>
+          <option value="DOCSkin">Skin</option>
+          <option value="DOCNeurology">Neurology</option>
+          <option value="DOCENT">ENT</option>
+          <option value="DOCOrthopedics">Orthopedics</option>
+        </optgroup> -->
+        <option value="callnurse">Call a Nurse</option>
+        <option value="medical">See medical History of a patient</option>
+        <option value="putpres">Insert a Prescription</option>
+        <option value="relnurse">Release a nurse</option>
+        <option value="shownurse">See all currently working Nurses</option>
+        <option value="changepass">Change Password</option>
+      </select><br><br>
+      <!-- <input type="submit" name="Submit"> -->
+
+      <input type="submit" value="Submit">
+  </form>
+  </body>
+</html>

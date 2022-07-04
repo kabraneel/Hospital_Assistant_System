@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>PATIENT</title>
+    <style type="text/css">
+      h1 {
+        text-align: center;
+        background-color: lightgrey;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      body {
+        text-align: center;
+      }
+      input[type=text] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=password] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type=submit] {
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+  <body>
+    <div class="patient-content">
+      <div class="patient-text">
+        <h1>PATIENT</h1>
+        <p>
+          You may choose to do one of the following:
+        </p>
+        <p><strong>1. View All Doctors 2. View All Tests 3. New Appointment 4. Appointment for existing patients 5. Get All Prescriptions 6. Get Bill 7. Change Password for existing Patient</strong></p>
+      </div>
+      <div class="home-img">
+        <img src="{{ url_for('static',filename='styles/8619.jpg') }}" alt="" />
+      </div>
+    </div>
+    <form action = "{{ url_for('patient_page') }}" method = "post">
+      <label for="PatientFunctions">Choose what you want to do: </label>
+      <select name="pf">
+        <optgroup label = "View All Doctors">
+          <option value="DOCCardiology">Cardiology</option>
+          <option value="DOCEyes">Eyes</option>
+          <option value="DOCSkin">Skin</option>
+          <option value="DOCNeurology">Neurology</option>
+          <option value="DOCENT">ENT</option>
+          <option value="DOCOrthopedics">Orthopedics</option>
+        </optgroup>
+        <option value="TESviewTest">View all Tests</option>
+        <option value="NEA">New Appointment</option>
+        <option value="APP">Appointment</option>
+        <option value="PRE">Old Prescription IDs</option>
+        <option value="MAK">Get Bill</option>
+        <option value="CHG">Change Password</option>
+      </select><br><br>
+      <input type="submit" name="Submit">
+    </form>
+  </body>
+</html>

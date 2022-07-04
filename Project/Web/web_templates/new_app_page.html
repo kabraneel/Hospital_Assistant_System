@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>NEW APPOINTMENT</title>
+  </head>
+  
+  <body>
+    <div class="patient-content">
+      <div class="patient-text">
+        <h1>NEW APPOINTMENT</h1>
+        <p>
+          Please fill the following details:
+        </p><br>
+      </div>
+      <div class="home-img">
+        <img src="{{ url_for('static',filename='styles/8619.jpg') }}" alt="" />
+      </div>
+    </div>
+    <form action = "{{ url_for('new_app_page') }}" method = "post">
+      <!-- <label for="PatientFunctions">Choose what you want to do: </label> -->
+      <label for="dname" >Doctor ID (Please find the doctor id from 'View All Doctors'):</label>
+      <input type="text" name="dname"><br>
+      <label for="fname" >Full Name:</label>
+      <input type="text" name="fname"><br>
+      <label for="age" >Age:</label>
+      <input type="text" name="age"><br>
+      <label for="smp" >Symptoms (Add with commas):</label>
+      <input type="text" name="smp"><br>
+      <label for="sex" >Sex:</label>
+      <input type="text" name="sex"><br>
+      <label for="wgt" >Weight:</label>
+      <input type="text" name="wgt"><br>
+      <label for="hgt" >Height:</label>
+      <input type="text" name="hgt"><br>
+      <input type="submit" name="Submit">
+    </form>
+  </body>
+</html>
